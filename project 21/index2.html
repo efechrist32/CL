@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Good time</h1>
+    <h2><day id="day"></day></h2>
+    Here are a list of delicious fruits you can buy;<br>
+    <fruits id="fruits"></fruits> 
+    <footer id="end"></footer>
+    <script>
+        var day;
+        switch (new Date().getDay()) {
+        case 0:
+        day = "Sunday";
+        break;
+        case 1:
+        day = "Monday";
+        break;
+        case 2:
+        day = "Tuesday";
+        break;
+        case 3:
+        day = "Wednesday";
+        break;
+        case 4:
+        day = "Thursday";
+        break;
+        case 5:
+        day = "Friday";
+        break;
+        case 6:
+        day = "Saturday";
+        }
+        document.getElementById("day").innerHTML = "Happy " + day;
+
+        var fruits = ["Apple", "Mango", "Grapes", "Watermelon", "Pawpaw", "Banana", "Tangerine"];
+        var text = "";
+        var i;
+        for (i = 0; i < fruits.length; i++) {
+            text += fruits[i] + "<br>";
+        }
+        document.getElementById("fruits").innerHTML = text;
+        var end="That's all!"
+        var part=new RegExp("all!")
+        var ans=part.test(end)
+        document.getElementById("end").innerHTML=ans
+    </script>
+</body>
+</html>
